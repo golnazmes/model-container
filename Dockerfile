@@ -17,3 +17,5 @@ EXPOSE 8000
 
 #commands to run whene the container starts
 CMD ["uvicorn", "app.main:app", "--host", "0.0.0.0", "--port", "8000"]
+#another way to do it
+#CMD ["gunicorn", "-w", "4", "-k", "uvicorn.workers.UvicornWorker", "app.main:app", "--bind", "0.0.0.0:8000"]
