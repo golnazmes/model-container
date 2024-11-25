@@ -1,36 +1,43 @@
-# model-container
+# Sentiment Analysis API Docker Setup
 
-FROM python:3.11 #what python image are you going to use (pulled from dockerhob,)
+## Why This Model: `cardiffnlp/twitter-roberta-base-sentiment-latest`
+- **Fine-tuned for Social Media**: Specifically trained on social media data, perfect for informal text.
+- **State-of-the-Art**: Utilizes the RoBERTa transformer architecture.
+- **Pretrained on Relevant Datasets**: Includes emojis, hashtags, and slang for better accuracy.
+- **Suitable For**:
+  - **Data**: Short text with emojis, hashtags, and slang.
+  - **Labels**: Positive, negative, neutral sentiment.
+  - **Use Cases**: Social media monitoring, feedback, and trend analysis.
 
-WORKDIR /app  #create code directory in the container and assign as the working directory
-
-COPY ./app /app copy the requirements and everything and place them inside the directory
-
-RUN pip install --no-cache-dir -r requirements.txt
-
-EXPOSE 8000 $some endpoint to where we can send the data and interact
-c#command to run
-CMD ["gunicorn", "-k", "uvicorn.workers.UvicornWorker", "main:app", "--bind", "0.0.0.0:8000", "--workers", "4"]
-uvicorn: server gateway interface, aqllows fast api to serve the requests
-"app.server:app" what to run
-network to host the container
-port which was exposed
-
-docker build -t image_name . #run the container
-docker run --name container_name -o 8000:8000 image_name
-d
+## Considerations When Choosing a Model:
+- **Data Relevance**: Ensure the model matches your data.
+- **Fine-tuning**: Decide if additional fine-tuning is needed.
+- **Model Size & Speed**: Larger models offer better accuracy but are slower and require more resources. Balance as needed.
 
 
-/docs
-default endpoint within fast api
-get and post
+
+## Docker Setup
+
+1. **Build the Docker image**:
+   ```bash
+   docker build -t sentiment-analysis-api .
+2. **Run the Docker Container**:
+   ```bash
+docker run -d -p 8000:8000 sentiment-analysis-api
+
+3. **Access the API**
+a) via web interface
+http://0.0.0.0:8000/docs 
+
+2)via a script
+`clien.ipynb`
 
 
-/how to send data
-import json
-import requests
+4. **Next steps**
 
-data
-url
-data 
-response = requests.post()
+- push image to dockerhub
+- deploy the container to your cloud
+- automate the test and deployment process with workflows
+ 
+
+
