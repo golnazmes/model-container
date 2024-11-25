@@ -19,8 +19,8 @@ I used  `cardiffnlp/twitter-roberta-base-sentiment-latest`, documentation: https
 - **Model Size & Speed**: Larger models offer better accuracy but are slower and require more resources. Balance as needed.
 
 
-## Local Access \\
-run the following: \\
+## Local Access \
+run the following: \
 ```bash
    fastapi dev main.py
 ```
@@ -35,13 +35,13 @@ run the following: \\
     ```bash
     ddocker run --name infer_model_container -p 8000:8000 infer_model_image
 
-3. **Access the API**\\
-a) via web interface\\
+3. **Access the API**\
+a) via web interface\
 
-http://0.0.0.0:8000/docs \\
+http://0.0.0.0:8000/docs \
 
-2)via a script\\
-`clien.ipynb`\\
+2)via a script\
+`clien.ipynb`\
 
 
 4. **Next steps**
