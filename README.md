@@ -40,7 +40,7 @@ run the following:
 3. **Access the API**\
 a) via web interface
 
-http://0.0.0.0:8000/docs \
+http://0.0.0.0:8000/docs 
 
 2)via a script\
 `clien.ipynb`
