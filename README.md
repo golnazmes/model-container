@@ -19,8 +19,8 @@ I used  `cardiffnlp/twitter-roberta-base-sentiment-latest`, documentation: https
 - **Model Size & Speed**: Larger models offer better accuracy but are slower and require more resources. Balance as needed.
 
 
-## Local Access /
-run the following: /
+## Local Access\
+run the following:\
 ```bash
    fastapi dev main.py
 ```
@@ -38,10 +38,10 @@ run the following: /
 3. **Access the API**\
 a) via web interface
 
-http://0.0.0.0:8000/docs /
+http://0.0.0.0:8000/docs \
 
 2)via a script\
-`clien.ipynb`\
+`clien.ipynb`
 
 
 4. **Next steps**
