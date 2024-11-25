@@ -35,7 +35,7 @@ run the following:
    docker build -t infer_model_image .
 2. **Run the Docker Container**:
     ```bash
-    ddocker run --name infer_model_container -p 8000:8000 infer_model_image
+    docker run --name infer_model_container -p 8000:8000 infer_model_image
 
 3. **Access the API**\
 a) via web interface
