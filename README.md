@@ -19,8 +19,10 @@ I used  `cardiffnlp/twitter-roberta-base-sentiment-latest`, documentation: https
 - **Model Size & Speed**: Larger models offer better accuracy but are slower and require more resources. Balance as needed.
 
 
-## Local Access\
-run the following:\
+## Local Access
+
+run the following:
+
 ```bash
    fastapi dev main.py
 ```
